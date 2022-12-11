@@ -1,7 +1,5 @@
 package jackson
 
-import lombok.*
-
 
 data class MainBooker(
     val country: String,
@@ -11,4 +9,4 @@ data class MainBooker(
     val city: String,
     val phone: String,
     val email: String
-) : JsonConvertable
+) : JsonConvertible

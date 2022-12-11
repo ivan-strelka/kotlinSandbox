@@ -7,7 +7,9 @@ import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.node.ArrayNode
 import com.fasterxml.jackson.databind.node.ObjectNode
+import com.fasterxml.jackson.module.kotlin.KotlinFeature
 import com.fasterxml.jackson.module.kotlin.KotlinModule
+import faker.com.fasterxml.jackson.module.kotlin.SingletonSupport
 import java.util.*
 
 class JacksonJsonUtils {
@@ -23,7 +25,16 @@ class JacksonJsonUtils {
             return ObjectMapper()
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
-                .registerModule(KotlinModule())
+                .registerModule(
+                    KotlinModule.Builder()
+                        .withReflectionCacheSize(512)
+                        .configure(KotlinFeature.NullToEmptyCollection, false)
+                        .configure(KotlinFeature.NullToEmptyMap, false)
+                        .configure(KotlinFeature.NullIsSameAsDefault, false)
+                        .configure(KotlinFeature.SingletonSupport, false)
+                        .configure(KotlinFeature.StrictNullChecks, false)
+                        .build()
+                )
         }
 
 

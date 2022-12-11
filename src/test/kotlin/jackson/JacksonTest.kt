@@ -1,8 +1,8 @@
 package jackson
 
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import java.util.*
 
 class JacksonTest {
 
@@ -19,5 +19,25 @@ class JacksonTest {
         assertEquals(country, obj.country, "чот не то")
         assertEquals(toObject2.country, obj.country, "чот не то")
         assertEquals(toObject.country, obj.country, "чот не то")
+    }
+
+    @Test
+    fun name1() {
+
+        val map = mapOf("sdf" to "sdff", 1 to 123.68).toJsonString().also { println("$it это map") } // в json через
+        val map2 = mapOf("sdf" to "sdff", 1 to 123.68).toJson().also { println("$it это map2") } // в json через
+
+    }
+
+    @Test
+    fun name2() {
+
+        val list = listOf("sdf", "sdfs", "sdfds").toJsonString().also { println(it) }
+        list.get(Random().nextInt(list.length)).also { println(it) } // вернется символ тк это единый стринг
+
+        val list2 = listOf("sdf", "sdfs", "sdfds").also { println(it) }
+        list2.randomOrNull().also { println(it) } // вернется элемент тк это массиво элементов
+        list2.randomOrNullJ().also { println(it) } // через функцию расширения
+
     }
 }
