@@ -1,0 +1,4 @@
+package jackson
+
+class Test {
+}

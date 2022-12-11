@@ -1,4 +1,4 @@
-package tasks.FizzBuzz
+package tasks
 
 import java.io.Serializable
 import java.util.stream.IntStream

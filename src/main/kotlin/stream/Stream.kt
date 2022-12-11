@@ -1,0 +1,4 @@
+package stream
+
+class Stream {
+}
