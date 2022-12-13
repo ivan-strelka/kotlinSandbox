@@ -2,6 +2,7 @@ package jackson
 
 import dsl.ex2.builder.PersonBuilderDsl
 import dsl.ex2.dsl.person
+import jackson.model.MainBooker
 import org.amshove.kluent.`should contain`
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
