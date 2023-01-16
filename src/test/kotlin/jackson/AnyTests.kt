@@ -6,7 +6,7 @@ import jackson.model.MainBooker
 import org.amshove.kluent.`should contain`
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import pattern.builder.ex1.Person
+import kotlinCore.patterns.builder.ex1.Person
 import java.util.*
 
 class AnyTests {

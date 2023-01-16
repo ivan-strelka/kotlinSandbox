@@ -27,7 +27,8 @@ def allureVersion = '2.17.2',
     jvmTarget = '1.8',
     selenide = '6.10.1',
     klaxon = '5.6',
-    kluent = '1.72'
+    kluent = '1.72',
+    koin_version = "3.3.0"
 
 dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
@@ -41,6 +42,10 @@ dependencies {
     // https://mvnrepository.com/artifact/com.beust/klaxon
     implementation group: 'com.beust', name: 'klaxon', version: klaxon
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.7.1-2'
+    // Koin Core features
+    implementation("io.insert-koin:koin-core:$koin_version")
+    // Koin Test features
+    testImplementation("io.insert-koin:koin-test-junit5:$koin_version")
 
     implementation(
             group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.7.1-2',

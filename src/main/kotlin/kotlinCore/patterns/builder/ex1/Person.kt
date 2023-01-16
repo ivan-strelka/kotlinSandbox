@@ -1,4 +1,4 @@
-package pattern.builder.ex1
+package kotlinCore.patterns.builder.ex1
 
 class Person {
     var name: String? = null
