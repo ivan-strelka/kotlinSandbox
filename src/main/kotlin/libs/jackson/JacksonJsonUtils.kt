@@ -1,4 +1,4 @@
-package jackson
+package libs.jackson
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.core.JsonProcessingException
@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.node.ArrayNode
 import com.fasterxml.jackson.databind.node.ObjectNode
 import com.fasterxml.jackson.module.kotlin.KotlinFeature
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import faker.com.fasterxml.jackson.module.kotlin.SingletonSupport
 import java.util.*
 
 class JacksonJsonUtils {

@@ -2,11 +2,12 @@ package jackson
 
 import dsl.ex2.builder.PersonBuilderDsl
 import dsl.ex2.dsl.person
-import jackson.model.MainBooker
+import kotlinCore.patterns.builder.ex1.Person
+import libs.jackson.*
+import libs.jackson.model.MainBooker
 import org.amshove.kluent.`should contain`
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlinCore.patterns.builder.ex1.Person
 import java.util.*
 
 class AnyTests {

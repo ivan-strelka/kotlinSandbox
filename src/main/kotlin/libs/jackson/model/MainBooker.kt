@@ -1,6 +1,6 @@
-package jackson.model
+package libs.jackson.model
 
-import jackson.JsonConvertible
+import libs.jackson.JsonConvertible
 
 
 data class MainBooker(

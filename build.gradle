@@ -39,9 +39,18 @@ dependencies {
     implementation group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
     implementation group: 'com.codeborne', name: 'selenide', version: selenide
     implementation group: 'org.amshove.kluent', name: 'kluent', version: kluent
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
     // https://mvnrepository.com/artifact/com.beust/klaxon
     implementation group: 'com.beust', name: 'klaxon', version: klaxon
     implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.7.1-2'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
+
+
     // Koin Core features
     implementation("io.insert-koin:koin-core:$koin_version")
     // Koin Test features
@@ -102,4 +111,8 @@ compileKotlin {
 
 compileTestKotlin {
     kotlinOptions.jvmTarget = jvmTarget
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
