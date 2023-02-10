@@ -1,6 +1,8 @@
 package kotlinCore.stream.course1.ex
 
-import kotlinCore.stream.course1.MockData.getPeople
+import kotlinCore.stream.course1.MockData.getPeopleGson
+import kotlinCore.stream.course1.MockData.getPeopleJackson
+import kotlinCore.stream.course1.MockData.getPeopleJava
 import kotlinCore.stream.course1.models.Person
 import org.junit.jupiter.api.Test
 
@@ -12,7 +14,7 @@ class Exercises1 {
 
     @Test
     fun imperativeApproach() {
-        val people = getPeople()
+        val people = getPeopleJava()
 
         val youngPeople: MutableList<Person> = mutableListOf()
         val limit = 10
@@ -33,11 +35,29 @@ class Exercises1 {
 
     @Test
     fun declarativeApproachUsingStreams() {
-        val people = getPeople()
+        val people = getPeopleJava()
 
         val youngPeople = people.filter { person -> person.age <= 18 }.take(10)
 
         youngPeople.forEach { println(it) }
 
+    }
+
+    @Test
+    fun name() {
+        val people = getPeopleJackson()
+
+        val youngPeople = people.filter { person -> person.age <= 18 }.take(10)
+
+        youngPeople.forEach { println(it) }
+    }
+
+    @Test
+    fun name2() {
+        val people = getPeopleGson()
+
+        val youngPeople = people.filter { person -> person.age <= 18 }.take(10)
+
+        youngPeople.forEach { println(it) }
     }
 }

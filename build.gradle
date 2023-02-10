@@ -50,14 +50,19 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.guava/guava
     implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
 
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin
+    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.14.2',
 
-    // Koin Core features
-    implementation("io.insert-koin:koin-core:$koin_version")
+
+            // Koin Core features
+            implementation("io.insert-koin:koin-core:$koin_version")
     // Koin Test features
     testImplementation("io.insert-koin:koin-test-junit5:$koin_version")
 
+
     implementation(
-            group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.7.1-2',
+
+
             "org.projectlombok:lombok:$lombokVersion",
             "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion",
             "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion",
