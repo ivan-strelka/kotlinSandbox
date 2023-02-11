@@ -9,16 +9,21 @@ import com.google.gson.Gson
 import kotlinCore.stream.course1.models.Car
 import kotlinCore.stream.course1.models.Person
 import org.apache.commons.io.IOUtils
+import org.junit.jupiter.api.Assertions
 import java.io.FileReader
 import java.io.InputStream
 import java.lang.reflect.Type
 
 fun main() {
     val pers = MockData.getPeopleGson()
-    val cars = MockData.getCarGson()
+    val cars = MockData.getCarsGson()
     val personjack = MockData.getPeopleJackson()
     val carsjack = MockData.getCarsJackson()
 
+    Assertions.assertEquals(1000, carsjack.size)
+    Assertions.assertEquals(1000, personjack.size)
+    Assertions.assertEquals(1000, cars.size)
+    Assertions.assertEquals(1000, pers.size)
 }
 
 object MockData {
@@ -55,7 +60,7 @@ object MockData {
         return gson.fromJson(FileReader("src/main/resources/resourcesStreamApi1/people.json"), arrayPersonType)
     }
 
-    fun getCarGson(): MutableList<Car> {
+    fun getCarsGson(): MutableList<Car> {
         val arrayCarType = object : TypeToken<ArrayList<Car>>() {}.type
         return gson.fromJson(FileReader("src/main/resources/resourcesStreamApi1/cars.json"), arrayCarType)
     }

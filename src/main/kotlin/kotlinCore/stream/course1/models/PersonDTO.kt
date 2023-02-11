@@ -5,9 +5,13 @@ data class PersonDTO(
     val id: Int,
     val age: Int
 ) {
-    fun map(person: Person): PersonDTO {
-        return PersonDTO(id = person.id, name = person.firstName, age = person.age)
+
+    companion object {
+        fun map(person: Person): PersonDTO {
+            return PersonDTO(id = person.id, name = person.firstName, age = person.age)
+        }
     }
+
 
 }
 

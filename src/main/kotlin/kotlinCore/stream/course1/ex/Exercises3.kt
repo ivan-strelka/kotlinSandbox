@@ -19,4 +19,22 @@ class Exercises3 {
         val max = numbers.max()
         assertEquals(max, 100)
     }
+
+    @Test
+    fun findMin() {
+        val numbers = mutableListOf(1, 2, 3, 100, 23, 93, 99)
+
+        val reduce = numbers.reduce { a: Int, b: Int -> a.coerceAtMost(b) }
+        println(reduce)
+
+    }
+
+    @Test
+    fun findMax() {
+        val numbers = mutableListOf(1, 2, 3, 100, 23, 93, 99)
+
+        val reduce = numbers.reduce { a: Int, b: Int -> a.coerceAtLeast(b) }
+        println(reduce)
+
+    }
 }
