@@ -45,5 +45,4 @@ class Person4 {
         return result
     }
 
-
 }
