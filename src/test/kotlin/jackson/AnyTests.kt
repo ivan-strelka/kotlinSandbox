@@ -3,6 +3,8 @@ package jackson
 import dsl.ex2.builder.PersonBuilderDsl
 import dsl.ex2.dsl.person
 import kotlinCore.patterns.builder.ex1.Person
+import kotlinCore.patterns.builder.ex3.Person4
+import kotlinCore.patterns.builder.ex3.Person44
 import libs.jackson.*
 import libs.jackson.model.MainBooker
 import org.amshove.kluent.`should contain`
@@ -101,6 +103,35 @@ class AnyTests {
         toJson `should contain` person2.name
         toJson `should contain` person2.age.toString()
         toJson `should contain` person2.city
+
+    }
+
+    @Test
+    fun neBuilder() {
+        val person = Person4()
+
+        person
+            .setName("Tom")
+            .setAddress("Street")
+            .setAge(18)
+
+
+        val person2 = Person44()
+
+        person2.apply {
+            name = "Tom"
+            address = "Street"
+            age = 18
+        }
+
+        println(person)
+
+        println(person2)
+
+    }
+
+    @Test
+    fun name123() {
 
     }
 }
