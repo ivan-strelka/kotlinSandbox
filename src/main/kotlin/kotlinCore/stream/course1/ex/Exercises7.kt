@@ -93,6 +93,11 @@ class Exercises7 {
             .summaryStatistics()
 
         println(statistics)
+        println(statistics.max)
+        println(statistics.count)
+        println(statistics.sum)
+        println(statistics.min)
+        println(statistics.average)
 
     }
 }
