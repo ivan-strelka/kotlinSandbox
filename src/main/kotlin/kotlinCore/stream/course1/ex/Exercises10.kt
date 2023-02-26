@@ -40,5 +40,50 @@ class Exercises10 {
         println(flatMap2)
     }
 
+    @Test
+    fun name() {
+        val mapIndexed = listOf(1, 2, 3, 4, 5)
+            .map { n -> n * (n + 1) / 2 }
+            .mapIndexed { index, n -> "Triangular number $index: $n" }
 
+        mapIndexed.forEach { println(it) }
+    }
+
+    @Test
+    fun name2() {
+
+        val numbers = listOf(1, 2, 3)
+        val words = listOf("one", "two", "three")
+        val zip = numbers.zip(words)
+        println(zip)
+
+    }
+
+    @Test
+    fun name3() {
+
+        val numbers = listOf(1, 2, 3)
+        val words = listOf("one", "two", "three")
+        val zip = numbers.zip(words)
+        val (ints, strings) = zip.unzip()
+        println(ints)
+        println(strings)
+
+        val unzip = zip.unzip()
+        println(unzip)
+
+
+    }
+
+    @Test
+    fun name4() {
+        val squares = listOf(1, 2, 3, 4, 5)
+            .associate { n -> n to n * n }
+
+        val squares2 = listOf(1, 2, 3, 4, 5).associateWith { n -> n * n }
+
+        println(squares)
+        println(squares2)
+
+    }
 }
