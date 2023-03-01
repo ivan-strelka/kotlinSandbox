@@ -40,7 +40,7 @@ class Exercises8 {
         )
         val counting = names.groupingBy { it }.eachCount()
 
-        counting.forEach { name, count ->
+        counting.forEach { (name, count) ->
             println("$name > $count")
         }
     }
