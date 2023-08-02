@@ -27,44 +27,12 @@ class Ex0 {
     }
 
 
-//
-//    fun xgetAllProductRequestTest() {
-//
-//
-//        val allProductRequest =
-//            apiFactory.get(company.getCompanyLeader()).marketplace.productRequests
-//                .getAllProductRequest(company.id!!)
-//                .model.value
-//
-//        val flatMap = allProductRequest.flatMap { it.requests }
-//
-//        val allProductRequest122 =
-//            allProductRequest.filter { it.requests.isNotEmpty() }.flatMap { it.requests }
-//
-//        val allProductRequest212e =
-//            allProductRequest.map { it.product }
-//
-//
-//        val allProductRequest3 =
-//            allProductRequest.filter { it.product.code == "InternetAcquiring" }
-//
-//        val allProductRequest4 =
-//            allProductRequest.filter { p -> p.product.code == "MerchantAcquiring" }
-//
-//        val allProductRequest4123 =
-//            allProductRequest.filter { p -> p.product.code == "MerchantAcquiring" }
-//                .map { it -> it.requests.filter { it.id.isNotEmpty() } }
-//
-//        val allProductRequest4d23 =
-//            allProductRequest.filter { it.requests.isNotEmpty() }.map { it.product.code.lowercase() }
-//
-//        ActiveProductCode.values().forEach { code ->
-//            Assertions.assertThat(allProductRequest4d23).containsAnyOf(code.type)
-//        }
-//
-//
-//        val target = mutableListOf<Int>()
-//        listOf(1, 2, 3, 4, 5).filterTo(target) { n -> n % 2 == 0 }
-//
-//    }
+    @Test
+    fun target() {
+
+        val target = mutableListOf<Int>()
+        listOf(1, 2, 3, 4, 5, 6, 10, 11).filterTo(target) { n -> n % 2 == 0 }
+
+        println(target)
+    }
 }
