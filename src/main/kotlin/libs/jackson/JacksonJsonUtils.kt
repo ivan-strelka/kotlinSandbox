@@ -198,9 +198,5 @@ class JacksonJsonUtils {
                 throw java.lang.RuntimeException(e)
             }
         }
-
-
     }
-
-
 }
