@@ -1,6 +1,7 @@
 package builder
 
-import domain.Rectangle
+import dsl.ex1.builder.ItemBuilder
+import dsl.ex1.domain.Rectangle
 
 class RectangleBuilder : ItemBuilder() {
 

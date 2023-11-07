@@ -1,9 +1,9 @@
 package dsl
 
-import builder.ImageBuilder
-import builder.ItemBuilder
 import builder.RectangleBuilder
-import domain.Item
+import dsl.ex1.builder.ImageBuilder
+import dsl.ex1.builder.ItemBuilder
+import dsl.ex1.domain.Item
 
 fun window(itemBuilder: ItemBuilder.() -> Unit): Item {
     return ItemBuilder().apply(itemBuilder).build()

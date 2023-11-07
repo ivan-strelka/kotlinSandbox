@@ -3,8 +3,8 @@ package jackson
 import dsl.ex2.builder.PersonBuilderDsl
 import dsl.ex2.dsl.person
 import kotlinCore.patterns.builder.ex1.Person
-import kotlinCore.patterns.builder.ex3.Person4
 import kotlinCore.patterns.builder.ex3.Person44
+import kotlinCore.patterns.builder.ex3.Person444
 import libs.jackson.*
 import libs.jackson.model.MainBooker
 import org.amshove.kluent.`should contain`
@@ -108,7 +108,7 @@ class AnyTests {
 
     @Test
     fun neBuilder() {
-        val person = Person4()
+        val person = Person444()
 
         person
             .setName("Tom")

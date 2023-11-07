@@ -1,4 +1,4 @@
-package domain
+package dsl.ex1.domain
 
 open class Item {
     var x = 0

@@ -1,6 +1,6 @@
-package builder
+package dsl.ex1.builder
 
-import domain.Item
+import dsl.ex1.domain.Item
 
 open class ItemBuilder {
     protected var item = Item()

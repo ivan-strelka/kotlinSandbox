@@ -1,6 +1,6 @@
-package builder
+package dsl.ex1.builder
 
-import domain.Image
+import dsl.ex1.domain.Image
 
 class ImageBuilder : ItemBuilder() {
 

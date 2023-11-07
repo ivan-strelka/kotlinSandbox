@@ -1,6 +1,6 @@
-import builder.ImageBuilder
-import builder.ItemBuilder
 import builder.RectangleBuilder
+import dsl.ex1.builder.ImageBuilder
+import dsl.ex1.builder.ItemBuilder
 import dsl.image
 import dsl.rectangle
 import dsl.window

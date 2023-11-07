@@ -16,6 +16,4 @@ fun main() {
         name = "Alex"
         city = "Paris"
     }
-
-
 }
