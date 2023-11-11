@@ -6,17 +6,17 @@ class Person4 {
     var address = ""
     var age = 0
 
-    fun setName(name: String): Person444 {
+    fun setName(name: String): Person4 {
         this.name = name
         return this
     }
 
-    fun setAddress(address: String): Person444 {
+    fun setAddress(address: String): Person4 {
         this.address = address
         return this
     }
 
-    fun setAge(age: Int): Person444 {
+    fun setAge(age: Int): Person4 {
         this.age = age
         return this
     }
