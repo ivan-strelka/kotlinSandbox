@@ -10,7 +10,9 @@ import libs.jackson.model.MainBooker
 import org.amshove.kluent.`should contain`
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import java.io.FileInputStream
 import java.util.*
+
 
 class AnyTests {
 
@@ -132,6 +134,15 @@ class AnyTests {
 
     @Test
     fun name123() {
+        val properties = Properties()
+        FileInputStream("config.properties").use { input -> properties.load(input) }
+        println(System.getProperty("db.url"))
+        println(System.getProperty("db.username"))
+        println(System.getProperty("db.password"))
 
+//// Теперь свойства доступны через System.getProperty()
+//        System.setProperty("db.url", properties.getProperty("db.url"))
+//        System.setProperty("db.username", properties.getProperty("db.username"))
+//        System.setProperty("db.password", properties.getProperty("db.password"))
     }
 }
